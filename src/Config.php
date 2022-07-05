@@ -3,13 +3,7 @@
 define("ROOT", getenv("ROOT"));
 define("URL_BASE", getenv("URL_BASE"));
 
-define('CODIGO_PACOTE_PASICO_ASSINATURA_PAGSEGURO', getenv("CODIGO_PACOTE_PASICO_ASSINATURA_PAGSEGURO"));
-const ENVIRONMENT_SANDBOX_PAGEGURO = true;
-const URL_PAGSEGURO = 'https://sandbox.pagseguro.uol.com.br';
-const URL_WS_PAGSEGURO = 'https://ws.sandbox.pagseguro.uol.com.br';
-const URL_STC_PAGSEGURO = 'https://ws.sandbox.pagseguro.uol.com.br';
-
-const SITE = "Dialog";
+const SITE = "STACK HOUSE";
 
 
 //Server settings
