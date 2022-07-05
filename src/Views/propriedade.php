@@ -112,8 +112,14 @@
                             <small class="card-subtitle mb-2 text-muted">A Venda</small>
                             <h6 class="card-title font-weight-normal">R$ <?=$imovel->valor?></h6>
                             <hr>
-                            <div>
-                                <a href="#0" class="btn btn-primary "><span class="btn-text">Contato</span></a>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="#0" class="btn btn-primary "><span class="btn-text">Contato</span></a>
+                                </div>
+                                <div class="col-2 col-offset-4">
+                                    <a href="https://wa.me/5548991137174" class="btn btn-success "><i class="fa-brands fa-whatsapp"></i></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -126,7 +132,7 @@
             <div class="col-8">
                 <div class="row mt-5 mb-2">
                     <div class="col-4">
-                        <i class="fa-solid fa-bed"></i> Camas · <?=$imovel->caracteristicas->cama?>
+                        <i class="fa-solid fa-bed"></i> Dormitório · <?=$imovel->caracteristicas->cama?>
                     </div>
                     <div class="col-4">
                         <i class="fa-solid fa-shower"></i> Banheiros · <?=$imovel->caracteristicas->banheiro?>
@@ -142,17 +148,19 @@
                     </div>
                 </div>
                 <div class="row mb-5">
-                   <p>Under Construction. PRIME LOCATION! Welcome to the NEW Sycamore Resort Vacation Condominiums located less than 5 miles from the Walt Disney Attractions! The SYCAMORE Resort LUXURY CONDOS offers investors and guests a new EXQUISITE opportunity. Amenities include a 3-story clubhouse with over 25, 000 sqft of entertainment. Rooftop bar, Upscale Dining, Convention Center, Play Club, Arcade, Fitness Center and EXCLUSIVE PET HOTEL. Enjoy the STUNNING 1...</p>
+                    <p><?=$imovel->descricao?></p>
                 </div>
                 <div class="row">
                     <h6 class="mb-3">Caracteristicas</h6>
                     <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
-                    <div class="col-4">Year Built: 2022 <hr> </div>
+                    <?php
+                    foreach($imovel->detalhes as $detalhe){
+                        ?>
+
+                        <div class="col-4"><?=$detalhe?><hr> </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
