@@ -3,7 +3,7 @@
 define("ROOT", getenv("ROOT"));
 define("URL_BASE", getenv("URL_BASE"));
 
-const SITE = "STACK HOUSE";
+const SITE = "STACK HOUSES";
 
 
 //Server settings
