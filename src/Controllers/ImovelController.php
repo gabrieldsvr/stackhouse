@@ -34,7 +34,7 @@ class ImovelController
         return "<div class='col-lg-4 col-md-6 my-3'>
                 <div class='card shadow-40'>
                     <a href='" . url_pesquisa('propriedade/' . $data->imovel_id) . "'>
-                    <img class='card-img-top' src='{$imovelJson->imagem_destaque}'
+                    <img class='card-img-top' src='{$imovelJson->imagem_destaque}' style='max-height: 200px;'
                                       alt='Card Image'></a>
                     <div class='card-body'>
                         <p class='small'>{$imovelJson->rua}, {$imovelJson->numero} {$imovelJson->bairro} {$imovelJson->cidade}, {$imovelJson->estado}<br></p>

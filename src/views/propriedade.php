@@ -20,7 +20,7 @@ $v->layout("_theme", [
                     <div class="swiper-wrapper">
                         <?php
                         foreach ($imovel->imagens as $img) {
-                            echo "<div class='swiper-slide'><img src='{$img}' alt='Galleries'></div>";
+                            echo "<div class='swiper-slide'><img src='{$img}' alt='Galleries' style='max-height: 500px;'></div>";
                         }
                         ?>
                     </div>
@@ -87,3 +87,12 @@ $v->layout("_theme", [
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
