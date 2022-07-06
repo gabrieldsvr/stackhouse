@@ -3,6 +3,7 @@ $v->layout("_theme", [
     "title" => $title
 ]);
 ?>
+
 <section class="fabrx-section">
     <div class="container">
         <div class="row">
@@ -19,7 +20,7 @@ $v->layout("_theme", [
                     <div class="swiper-wrapper">
                         <?php
                         foreach ($imovel->imagens as $img) {
-                            echo "<div class='swiper-slide'><img src='{$imovel->imagem_destaque}' alt='Galleries'></div>";
+                            echo "<div class='swiper-slide'><img src='{$img}' alt='Galleries'></div>";
                         }
                         ?>
                     </div>
