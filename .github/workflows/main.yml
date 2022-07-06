@@ -16,6 +16,9 @@ jobs:
           pwd
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        run: |
+          ls
+          pwd
         with:
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_user }}
