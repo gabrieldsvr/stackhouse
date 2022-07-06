@@ -15,7 +15,7 @@ $v->layout("_theme", [
         </div>
         <hr>
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-sm-8">
                 <div class="swiper-container single-swiper text-center">
                     <div class="swiper-wrapper">
                         <?php
@@ -28,22 +28,15 @@ $v->layout("_theme", [
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-sm-4">
                 <div class="row my-2">
                     <div class="card shadow-40">
                         <div class="card-body">
                             <small class="card-subtitle mb-2 text-muted">A Venda</small>
                             <h6 class="card-title font-weight-normal">R$ <?= $imovel->valor ?></h6>
                             <hr>
-                            <div class="row">
-                                <div class="col-6">
-                                    <a href="#0" class="btn btn-primary "><span class="btn-text">Contato</span></a>
-                                </div>
-                                <div class="col-2 col-offset-4">
-                                    <a href="https://wa.me/5548991137174" class="btn btn-success "><i
-                                                class="fa-brands fa-whatsapp"></i></a>
-                                </div>
-
+                            <div>
+                                    <a href="" class="btn-lg btn-primary"><span class="btn-text">Contato</span></a>
                             </div>
                         </div>
                     </div>

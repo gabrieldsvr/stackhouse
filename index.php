@@ -15,6 +15,10 @@ $router->get("/contato", "WebController:contato", "WebController.contato");
 
 
 
+$router->get("/mail", "MailController:send", "MailController.send");
+
+
+
 
 
 $router->group("ops");
