@@ -47,7 +47,7 @@ class ImovelController
                         <h5 class='card-title mb-2'>
                         {$imovelJson->valor}
                         </h5>
-                        <p>{$imovelJson->caracteristicas->area}m² {$imovelJson->caracteristicas->cama} Quartos {$imovelJson->caracteristicas->banheiro} Banheiros {$imovelJson->caracteristicas->garagem} Vargas</p>
+                        <p>{$imovelJson->caracteristicas->area}m² - {$imovelJson->caracteristicas->cama} Quartos {$imovelJson->caracteristicas->banheiro} Banheiros {$imovelJson->caracteristicas->garagem} Vagas</p>
                         <a href='" . url_pesquisa('propriedade/' . $data->imovel_id) . "' class='btn btn-primary float-end'><span class='btn-text'>Detalhes</span></a>
                     </div>
                 </div>

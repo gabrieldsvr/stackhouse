@@ -1,4 +1,4 @@
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 425px) {
     #logo-header {
         max-width: 200%;
     }
@@ -9,6 +9,29 @@
         max-height: 200px !important;
     }
 }
+
+@media only screen and (min-width: 426px)  and (max-width: 770px){
+    #logo-header {
+        max-width: 200%;
+    }
+    #logo-footer {
+        max-width: 300%;
+    }
+    .imagem-imovel{
+        max-height: 200px !important;
+    }
+}
+
+
+@media only screen and (min-width: 771px) and (max-width: 1024px) {
+    #logo-footer {
+        max-width: 130%;
+    }
+    .imagem-imovel{
+        max-height: 200px !important;
+    }
+}
+
 
 .imagem-imovel{
     max-height: 500px;
