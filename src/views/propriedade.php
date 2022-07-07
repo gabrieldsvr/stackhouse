@@ -33,7 +33,7 @@ $v->layout("_theme", [
                     <div class="card shadow-40">
                         <div class="card-body">
                             <small class="card-subtitle mb-2 text-muted">A Venda</small>
-                            <h6 class="card-title font-weight-normal">R$ <?= $imovel->valor ?></h6>
+                            <h6 class="card-title font-weight-normal"><?= isset($imovel->valor) && $imovel->valor!= "" ? "R$ {$imovel->valor}" : "A consultar"?></h6>
                             <hr>
                             <div>
                                 <a href="" class="btn-lg btn-primary"><span class="btn-text">Contato</span></a>
