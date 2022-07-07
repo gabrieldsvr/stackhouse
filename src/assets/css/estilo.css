@@ -1,0 +1,8 @@
+@media only screen and (max-width: 426px) {
+    #logo-header {
+        max-width: 200%;
+    }
+    #logo-footer {
+        max-width: 200%;
+    }
+}

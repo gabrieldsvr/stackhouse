@@ -17,6 +17,7 @@
     <link href="<?= url("assets/css/simplebar.min.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/prism.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/fabrx-styles.css") ?>" rel="stylesheet" type="text/css" media="all">
+    <link href="<?= url("assets/css/estilo.css") ?>" rel="stylesheet" type="text/css" media="all">
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
