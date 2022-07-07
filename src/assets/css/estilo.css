@@ -3,6 +3,13 @@
         max-width: 200%;
     }
     #logo-footer {
-        max-width: 200%;
+        max-width: 300%;
     }
+    .imagem-imovel{
+        max-height: 200px !important;
+    }
+}
+
+.imagem-imovel{
+    max-height: 500px;
 }

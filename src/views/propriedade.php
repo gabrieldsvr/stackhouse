@@ -20,7 +20,7 @@ $v->layout("_theme", [
                     <div class="swiper-wrapper">
                         <?php
                         foreach ($imovel->imagens as $img) {
-                            echo "<div class='swiper-slide'><img src='{$img}' alt='Galleries' style='max-height: 500px;'></div>";
+                            echo "<div class='swiper-slide'><img src='{$img}' alt='Galleries' class='imagem-imovel' style=''></div>";
                         }
                         ?>
                     </div>
@@ -45,23 +45,23 @@ $v->layout("_theme", [
         </div>
         <hr>
 
-        <div class="row">
+        <div class="row p-2">
             <div class="col-12">
                 <div class="row mt-5 mb-2">
-                    <div class="col-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-bed"></i> Dormitório · <?= $imovel->caracteristicas->cama ?>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-shower"></i> Banheiros · <?= $imovel->caracteristicas->banheiro ?>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-car"></i> Garagem · <?= $imovel->caracteristicas->garagem ?>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-layer-group"></i> <?= $imovel->caracteristicas->area ?> m²
                     </div>
-                    <div class="col-4">
-                        <i class="fa-solid fa-map-location-dot"></i> Localization
+                    <div class="col-6 col-sm-6 col-md-4">
+<!--                        <i class="fa-solid fa-map-location-dot"></i> Localization-->
                     </div>
                 </div>
                 <div class="row mb-5">
