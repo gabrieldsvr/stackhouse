@@ -83,8 +83,7 @@ $v->layout("_theme", [
                                     <div class="row">
                                         <?php
                                         foreach ($imovel->detalhes as $detalhe) { ?>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><?= $detalhe ?>
-                                                <hr>
+                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5"><?= $detalhe ?>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -106,9 +105,7 @@ $v->layout("_theme", [
                                     <div class="row">
                                         <?php
                                         foreach ($imovel->condominio as $detalhe) { ?>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3"><?= $detalhe ?>
-                                                <hr>
-                                            </div>
+                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5"><?= $detalhe ?></div>
                                         <?php } ?>
                                     </div>
                                 </div>
