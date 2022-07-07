@@ -39,6 +39,13 @@
     <?= $v->section("content"); ?>
 </main>
 
+
+<div class="float-nav action-whatsapp ">
+    <a href="https://wa.me/5548991137174" id="icon-whatsapp" target="_blank" class="icon-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
+
 <?php require __DIR__ . "/partials/_footer.phtml" ?>
 
 

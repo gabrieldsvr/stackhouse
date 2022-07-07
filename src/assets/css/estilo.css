@@ -2,24 +2,30 @@
     #logo-header {
         max-width: 200%;
     }
+
     #logo-footer {
         max-width: 300%;
     }
-    .imagem-imovel{
+
+    .imagem-imovel {
         max-height: 200px !important;
     }
 }
 
-@media only screen and (min-width: 426px)  and (max-width: 770px){
+@media only screen and (min-width: 426px)  and (max-width: 770px) {
     #logo-header {
         max-width: 200%;
     }
+
     #logo-footer {
         max-width: 300%;
     }
-    .imagem-imovel{
+
+    .imagem-imovel {
         max-height: 200px !important;
     }
+
+
 }
 
 
@@ -27,12 +33,32 @@
     #logo-footer {
         max-width: 130%;
     }
-    .imagem-imovel{
+
+    .imagem-imovel {
         max-height: 200px !important;
     }
 }
 
+.float-nav {
+    position: fixed;
+    right: 25px;
+    z-index: 6;
+    bottom: calc(30% - 80px);
+}
+.float-nav > a.icon-whatsapp {
+    text-decoration: none;
+    display: block;
+    background: #00e676;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 38px;
+    padding-top: 1px;
+}
 
-.imagem-imovel{
+.imagem-imovel {
     max-height: 500px;
 }
