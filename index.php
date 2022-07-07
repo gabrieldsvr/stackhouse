@@ -9,6 +9,7 @@ $router->namespace("Source\Controllers");
 $router->group(null);
 $router->get("/", "WebController:home", "WebController.home");
 $router->get("/map", "WebController:map", "WebController.map");
+$router->get("/map/{id}", "WebController:map", "WebController.map");
 $router->get("/map/jsonMap", "MapController:jsonMap", "MapController.jsonMap");
 $router->get("/propriedade/{id}", "WebController:propriedade", "WebController.propriedade");
 $router->get("/contato", "WebController:contato", "WebController.contato");

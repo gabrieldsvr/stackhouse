@@ -28,10 +28,12 @@ class WebController
     public function map($data):void{
         $imovelcontroller = new ImovelController();
 
-        echo $this->view->render("map", [
+        $values =  [
             "title" => "MAPA",
             "imoveis" => $imovelcontroller->get(null),
-        ]);
+            "imovel_focus" =>isset($data['id']) ? json_decode($imovelcontroller->get($data['id'])->data()->imo_json) : null
+        ];
+        echo $this->view->render("map",$values);
     }
     public function propriedade($data):void{
         $imovelcontroller = new ImovelController();

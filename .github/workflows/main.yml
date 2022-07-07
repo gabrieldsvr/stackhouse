@@ -21,5 +21,4 @@ jobs:
             **/.git*
             **/.git*/**
             **/vendor/**
-            **/src/assets/images*/**
             .htaccess
