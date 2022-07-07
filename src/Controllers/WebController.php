@@ -20,7 +20,7 @@ class WebController
         $imovelcontroller = new ImovelController();
 
         echo $this->view->render("home", [
-            "title" => "home",
+            "title" => "HOME",
             "imoveis" => $imovelcontroller->get(null),
         ]);
     }
@@ -42,7 +42,7 @@ class WebController
         $imovel_id = $imovel->data()->imovel_id;
 
         echo $this->view->render("propriedade", [
-            "title" => "Detalhes",
+            "title" => "DETALHES",
             "imovel" =>  $imovelJSON,
             "imovel_id" => $imovel_id
         ]);
@@ -50,7 +50,13 @@ class WebController
     public function contato($data):void{
 
         echo $this->view->render("contato", [
-            "title" => "contato"
+            "title" => "CONTATO"
+        ]);
+    }
+    public function sobre_nos($data):void{
+
+        echo $this->view->render("sobre_nos", [
+            "title" => "SOBRE"
         ]);
     }
 }

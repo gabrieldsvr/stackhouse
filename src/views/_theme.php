@@ -6,7 +6,7 @@
     <meta name="keywords" content="Fabrx">
     <meta name="author" content="Fabrx">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>STACK HOUSE</title>
+    <title><?=$title?></title>
     <link href="<?= url("assets/images/favicon.ico") ?>" rel="shortcut icon" type="image/x-icon">
     <!-- Fabrx External CSS -->
     <link href="<?= url("assets/css/loading-bar.min.css") ?>" rel="stylesheet" type="text/css" media="all">
@@ -38,7 +38,6 @@
 <main>
     <?= $v->section("content"); ?>
 </main>
-
 
 <div class="float-nav action-whatsapp ">
     <a href="https://wa.me/5548991137174" id="icon-whatsapp" target="_blank" class="icon-whatsapp">

@@ -13,6 +13,7 @@ $router->get("/map/{id}", "WebController:map", "WebController.map");
 $router->get("/map/jsonMap", "MapController:jsonMap", "MapController.jsonMap");
 $router->get("/propriedade/{id}", "WebController:propriedade", "WebController.propriedade");
 $router->get("/contato", "WebController:contato", "WebController.contato");
+$router->get("/sobre_nos", "WebController:sobre_nos", "WebController.sobre_nos");
 
 
 
