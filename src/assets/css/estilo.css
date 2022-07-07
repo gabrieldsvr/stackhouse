@@ -45,6 +45,7 @@
     z-index: 6;
     bottom: calc(30% - 80px);
 }
+
 .float-nav > a.icon-whatsapp {
     text-decoration: none;
     display: block;
