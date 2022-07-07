@@ -37,19 +37,17 @@ $v->layout("_theme", [
                 imovelFeature.imo_json = JSON.parse(obj.imo_json);
                 imovelFeature.imovel_id = obj.imovel_id;
 
-                console.log(imovelFeature.imo_json.caracteristicas.cama)
-                imovelFeature.type = 'Feature';
-                imovelFeature.properties = {
-                    'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.imo_json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.imo_json.valor+'</h6><br>' + imovelFeature.imo_json.bairro + " " +  imovelFeature.imo_json.cidade + '<br>' + imovelFeature.imo_json.caracteristicas.cama + ' Quartos ' + imovelFeature.imo_json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.imo_json.caracteristicas.garagem + ' Vagas ' + imovelFeature.imo_json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("propriedade/")?>'+imovelFeature.imovel_id+'" class="btn btn-sm btn-primary"> Detalhes</a'
-                };
-                imovelFeature.geometry = {
-                    'type' : 'Point',
-                    'coordinates': [imovelFeature.imo_json.localization.lat, imovelFeature.imo_json.localization.lon]
-                };
-
-
-                console.log(imovelFeature)
-                features.push(imovelFeature)
+                if (imovelFeature.imo_json.localization){
+                    imovelFeature.type = 'Feature';
+                    imovelFeature.properties = {
+                        'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.imo_json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.imo_json.valor+'</h6><br>' + imovelFeature.imo_json.bairro + " " +  imovelFeature.imo_json.cidade + '<br>' + imovelFeature.imo_json.caracteristicas.cama + ' Quartos ' + imovelFeature.imo_json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.imo_json.caracteristicas.garagem + ' Vagas ' + imovelFeature.imo_json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("propriedade/")?>'+imovelFeature.imovel_id+'" class="btn btn-sm btn-primary"> Detalhes</a'
+                    };
+                    imovelFeature.geometry = {
+                        'type' : 'Point',
+                        'coordinates': [imovelFeature.imo_json.localization.lat, imovelFeature.imo_json.localization.lon]
+                    };
+                    features.push(imovelFeature)
+                }
             });
 
 
