@@ -128,7 +128,7 @@ $v->layout("_theme", [
                                     <div class="row">
                                         <?php
                                         foreach ($imovel->unidades as $unidades) { ?>
-                                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5"><?= $unidades ?></div>
+                                            <div class="col-12 col-md-6  mb-5"><?= $unidades ?></div>
                                         <?php } ?>
                                     </div>
                                 </div>
