@@ -1,3 +1,3 @@
 
 
-CREATE TABLE `stackhouse`.`imovel` ( `imovel_id` INT NOT NULL AUTO_INCREMENT , `imo_json` TEXT NOT NULL , PRIMARY KEY (`imovel_id`)) ENGINE = MyISAM;
+CREATE TABLE `stackhouse`.`imovel` ( `id` INT NOT NULL AUTO_INCREMENT , `json` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;

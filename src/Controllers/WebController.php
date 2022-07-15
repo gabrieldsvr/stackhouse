@@ -3,7 +3,6 @@
 namespace Source\Controllers;
 
 use League\Plates\Engine;
-use yidas\googleMaps\Client;
 
 class WebController
 {
@@ -31,20 +30,20 @@ class WebController
         $values =  [
             "title" => "MAPA",
             "imoveis" => $imovelcontroller->get(null),
-            "imovel_focus" =>isset($data['id']) ? json_decode($imovelcontroller->get($data['id'])->data()->imo_json) : null
+            "imovel_focus" =>isset($data['id']) ? json_decode($imovelcontroller->get($data['id'])->data()->json) : null
         ];
         echo $this->view->render("map",$values);
     }
     public function propriedade($data):void{
         $imovelcontroller = new ImovelController();
         $imovel = $imovelcontroller->get($data['id']);
-        $imovelJSON = json_decode($imovel->data()->imo_json);
-        $imovel_id = $imovel->data()->imovel_id;
+        $imovelJSON = json_decode($imovel->data()->json);
+        $id = $imovel->data()->id;
 
         echo $this->view->render("propriedade", [
             "title" => "DETALHES",
             "imovel" =>  $imovelJSON,
-            "imovel_id" => $imovel_id
+            "id" => $id
         ]);
     }
     public function contato($data):void{

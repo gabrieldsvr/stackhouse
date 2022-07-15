@@ -10,7 +10,7 @@ $v->layout("_theme", [
             <div class="col-12">
                 <h4><?= $imovel->rua ?> <?= $imovel->numero ?></h4>
                 <br>
-                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $imovel_id ?></h6>
+                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $id ?></h6>
             </div>
         </div>
         <hr>
@@ -67,7 +67,7 @@ $v->layout("_theme", [
                     <?php } ?>
                     <?php if (isset($imovel->localization)){?>
                         <div class="col-6 col-sm-6 col-md-4">
-                            <a href="<?=url_pesquisa("map/{$imovel_id}")?>"> <i class="fa-solid fa-map-location-dot"></i> Localização</a>
+                            <a href="<?=url_pesquisa("map/{$id}")?>"> <i class="fa-solid fa-map-location-dot"></i> Localização</a>
                         </div>
                     <?php } ?>
                 </div>

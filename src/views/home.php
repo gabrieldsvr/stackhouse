@@ -5,6 +5,7 @@ use Source\Controllers\ImovelController;
 $v->layout("_theme", [
     "title" => $title
 ]);
+
 ?>
 
 <section class="fabrx-section">

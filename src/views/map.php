@@ -34,17 +34,17 @@ $v->layout("_theme", [
             dados = JSON.parse(data)
             dados.forEach(function (obj,index) {
                 let imovelFeature = {};
-                imovelFeature.imo_json = JSON.parse(obj.imo_json);
-                imovelFeature.imovel_id = obj.imovel_id;
+                imovelFeature.json = JSON.parse(obj.json);
+                imovelFeature.id = obj.id;
 
-                if (imovelFeature.imo_json.localization){
+                if (imovelFeature.json.localization){
                     imovelFeature.type = 'Feature';
                     imovelFeature.properties = {
-                        'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.imo_json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.imo_json.valor+'</h6><br>' + imovelFeature.imo_json.bairro + " " +  imovelFeature.imo_json.cidade + '<br>' + imovelFeature.imo_json.caracteristicas.cama + ' Quartos ' + imovelFeature.imo_json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.imo_json.caracteristicas.garagem + ' Vagas ' + imovelFeature.imo_json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("propriedade/")?>'+imovelFeature.imovel_id+'" class="btn btn-sm btn-primary"> Detalhes</a'
+                        'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.json.valor+'</h6><br>' + imovelFeature.json.bairro + " " +  imovelFeature.json.cidade + '<br>' + imovelFeature.json.caracteristicas.cama + ' Quartos ' + imovelFeature.json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.json.caracteristicas.garagem + ' Vagas ' + imovelFeature.json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("propriedade/")?>'+imovelFeature.id+'" class="btn btn-sm btn-primary"> Detalhes</a'
                     };
                     imovelFeature.geometry = {
                         'type' : 'Point',
-                        'coordinates': [imovelFeature.imo_json.localization.lat, imovelFeature.imo_json.localization.lon]
+                        'coordinates': [imovelFeature.json.localization.lat, imovelFeature.json.localization.lon]
                     };
                     features.push(imovelFeature)
                 }

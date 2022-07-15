@@ -23,14 +23,15 @@ class ImovelController
     {
         $lista = "";
         foreach ($data as $imovel) {
-            $lista .= $this->criaCardDestaque($imovel);
+            $lista .= $this->criaCardDestaque($imovel->data());
         }
         return $lista;
     }
 
     private function criaCardDestaque($data)
     {
-        $imovelJson = json_decode($data->imo_json);
+        $imovelJson = json_decode($data->json);
+
         if (!isset($imovelJson->valor) || $imovelJson->valor == ""){
             $imovelJson->valor = "A consultar";
         }else{
@@ -39,7 +40,7 @@ class ImovelController
 
         return "<div class='col-lg-4 col-md-6 my-3'>
                 <div class='card shadow-40'>
-                    <a href='" . url_pesquisa('propriedade/' . $data->imovel_id) . "'>
+                    <a href='" . url_pesquisa('propriedade/' . $data->id) . "'>
                     <img class='card-img-top' src='{$imovelJson->imagem_destaque}' style='max-height: 200px;'
                                       alt='Card Image'></a>
                     <div class='card-body'>
@@ -48,7 +49,7 @@ class ImovelController
                         {$imovelJson->valor}
                         </h5>
                         <p>{$imovelJson->caracteristicas->area}m² - {$imovelJson->caracteristicas->cama} Quartos {$imovelJson->caracteristicas->banheiro} Banheiros {$imovelJson->caracteristicas->garagem} Vagas</p>
-                        <a href='" . url_pesquisa('propriedade/' . $data->imovel_id) . "' class='btn btn-primary float-end'><span class='btn-text'>Detalhes</span></a>
+                        <a href='" . url_pesquisa('propriedade/' . $data->id) . "' class='btn btn-primary float-end'><span class='btn-text'>Detalhes</span></a>
                     </div>
                 </div>
             </div>";
