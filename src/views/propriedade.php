@@ -49,7 +49,7 @@ $v->layout("_theme", [
             <div class="col-12">
                 <div class="row mt-5 mb-2">
                     <div class="col-6 col-sm-6 col-md-4">
-                        <i class="fa-solid fa-bed"></i> Dormitório · <?= $imovel->caracteristicas->cama ?>
+                        <i class="fa-solid fa-bed"></i> Dormitórios · <?= $imovel->caracteristicas->cama ?>
                     </div>
                     <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-bed"></i> Suítes · <?= $imovel->caracteristicas->suites ?>
