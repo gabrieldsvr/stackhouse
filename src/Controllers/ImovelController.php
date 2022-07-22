@@ -19,18 +19,28 @@ class ImovelController
         }
     }
 
+
+    public function getAPI($data)
+    {
+        $result = file_get_contents( 'http://127.0.0.1:8000/api/imoveis/182e741f-40b2-3908-bf58-530a8e272885');
+        return json_decode($result)->data;
+    }
+
+
+
     public function listCardsDestaque($data)
     {
         $lista = "";
         foreach ($data as $imovel) {
-            $lista .= $this->criaCardDestaque($imovel->data());
+            $lista .= $this->criaCardDestaque($imovel);
         }
         return $lista;
     }
 
     private function criaCardDestaque($data)
     {
-        $imovelJson = json_decode($data->json);
+
+        $imovelJson = $data->json;
 
         if (!isset($imovelJson->valor) || $imovelJson->valor == ""){
             $imovelJson->valor = "A consultar";

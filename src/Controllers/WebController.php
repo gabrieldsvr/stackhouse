@@ -17,10 +17,11 @@ class WebController
 
     public function home($data):void{
         $imovelcontroller = new ImovelController();
+        $imovel = $imovelcontroller->getAPI($data);
 
         echo $this->view->render("home", [
             "title" => "HOME",
-            "imoveis" => $imovelcontroller->get(null),
+            "imoveis" => $imovel,
         ]);
     }
 

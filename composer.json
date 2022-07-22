@@ -26,6 +26,7 @@
     "coffeecode/datalayer": "1.1.8",
     "coffeecode/router": "1.*",
     "league/plates": "v4.0.0-alpha",
-    "yidas/google-maps-services": "1.0.3"
+    "yidas/google-maps-services": "1.0.3",
+    "ext-curl": "*"
   }
 }
