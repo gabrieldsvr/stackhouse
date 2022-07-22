@@ -22,7 +22,7 @@ class ImovelController
 
     public function getAPI($data)
     {
-        $result = file_get_contents( 'http://127.0.0.1:8000/api/imoveis/182e741f-40b2-3908-bf58-530a8e272885');
+        $result = file_get_contents( 'https://backend.adminsystem.com.br/api/imoveis/182e741f-40b2-3908-bf58-530a8e272885');
         return json_decode($result)->data;
     }
 
