@@ -8,7 +8,7 @@ $v->layout("_theme", [
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4><?= $imovel->rua ?> <?= $imovel->numero ?></h4>
+                <h4><?= $imovel->nome?></h4>
                 <br>
                 <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $id ?></h6>
             </div>
