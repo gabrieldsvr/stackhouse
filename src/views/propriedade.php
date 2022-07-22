@@ -52,6 +52,9 @@ $v->layout("_theme", [
                         <i class="fa-solid fa-bed"></i> Dormitório · <?= $imovel->caracteristicas->cama ?>
                     </div>
                     <div class="col-6 col-sm-6 col-md-4">
+                        <i class="fa-solid fa-bed"></i> Suítes · <?= $imovel->caracteristicas->suites ?>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-shower"></i> Banheiros · <?= $imovel->caracteristicas->banheiro ?>
                     </div>
                     <div class="col-6 col-sm-6 col-md-4">
