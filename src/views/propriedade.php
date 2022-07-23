@@ -36,7 +36,7 @@ $v->layout("_theme", [
                             <h6 class="card-title font-weight-normal"><?= isset($imovel->valor) && $imovel->valor != "" ? "R$ {$imovel->valor}" : "A consultar" ?></h6>
                             <hr>
                             <div>
-                                <a href="" class="btn-lg btn-primary"><span class="btn-text">Contato</span></a>
+                                <a href="<?=url_pesquisa("contato")?>" class="btn-lg btn-primary" ><span class="btn-text">Contato</span></a>
                             </div>
                         </div>
                     </div>
