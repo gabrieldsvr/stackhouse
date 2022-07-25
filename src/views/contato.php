@@ -38,10 +38,56 @@ $v->layout("_theme", [
 
 
 <?php $v->start("js") ?>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="<?=url("assets/js/jquery-validation/jquery.validate.min.js")?>"></script>
 
 <script>
+    resetToastPosition = function () {
+        $('.jq-toast-wrap').removeClass('bottom-left bottom-right top-left top-right mid-center'); // to remove previous position class
+        $(".jq-toast-wrap").css({
+            "top": "",
+            "left": "",
+            "bottom": "",
+            "right": ""
+        });
+
+    };
+    showDangerToast = function() {
+        'use strict';
+        resetToastPosition();
+        $.toast({
+            heading: 'Erro!',
+            text: 'Ocorreu um erro inesperado no envio da mensagem',
+            showHideTransition: 'slide',
+            icon: 'error',
+            loaderBg: '#f2a654',
+            position: 'top-right'
+        })
+    };
+    showSuccessToast = function() {
+        'use strict';
+        resetToastPosition();
+        $.toast({
+            heading: 'Sucesso!',
+            text: 'Mensagem enviada com sucesso!',
+            showHideTransition: 'slide',
+            icon: 'success',
+            loaderBg: '#f96868',
+            position: 'top-right'
+        })
+    };
+    showInfoToast = function() {
+        'use strict';
+        resetToastPosition();
+        $.toast({
+            heading: 'Atenção...',
+            text: 'Enviando sua mensagem.',
+            showHideTransition: 'slide',
+            icon: 'info',
+            loaderBg: '#46c35f',
+            position: 'top-right'
+        })
+    };
+
     $("#formContato").validate({
         rules: {
             nome: "required",
@@ -67,17 +113,22 @@ $v->layout("_theme", [
         submitHandler: function (form, event) {
             event.preventDefault();
             var form = $("#formContato");
-            // var url = form.attr("action");
             $.ajax({
                 type: "POST",
                 url: "<?=url_pesquisa("mail")?>",
                 data:  form.serialize(),
                 dataType: 'json',
-                success: function (data) {
-                    console.log(data)
-                    // showSuccessToast();
-                    // $("#formImovel")[0].reset();
+                beforeSend: function () {
+                    showInfoToast();
                 },
+                success: function (data) {
+                    showSuccessToast();
+                    document.getElementById("formContato").reset();
+                },
+                error: function (data) {
+                    showDangerToast();
+                    console.error(data)
+                }
             });
         }
     });

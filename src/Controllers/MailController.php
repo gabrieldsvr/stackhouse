@@ -10,15 +10,19 @@ class MailController
     public function send($data)
     {
 
-        $this->sendEmailRecebimento($data);
-//        if (!$mail->send()) {
-//            die ("Erro no envio do e-mail: {$mail -> ErrorInfo}");
-//        }
-//        echo 'Mensagem enviada com sucesso';
+
+        try {
+            $this->sendEmailRecebimento($data);
+            $callback["message"] = "Sucesso!";
+            echo json_encode($callback);
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
 
     }
 
-    public function sendEmailRecebimento($data){
+    public function sendEmailRecebimento($data)
+    {
         $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = 'smtp.titan.email';
@@ -29,7 +33,8 @@ class MailController
         $mail->Password = 'G4RhS5mJIa';
 
         $mail->setFrom('contato@gsvweb.com.br', 'NoReply');
-        $mail->addAddress('contato@starkhouse.com.br', 'Contato');
+//        contato@starkhouse.com.br
+        $mail->addAddress('gabrieldossantosvargas@gmail.com', 'Contato');
         $mail->Subject = 'Contato pelo site';
 
         $mail->Charset = 'UTF-8';
@@ -48,19 +53,19 @@ class MailController
         <tbody>
         <tr>
             <td>Nome</td>
-            <td>'. $data['nome'].'</td>
+            <td>' . $data['nome'] . '</td>
         </tr>
         <tr>
             <td>Email</td>
-            <td>'. $data['email'].'</td>
+            <td>' . $data['email'] . '</td>
         </tr>
         <tr>
             <td>Telefone</td>
-            <td>'. $data['telefone'].'</td>
+            <td>' . $data['telefone'] . '</td>
         </tr>
         <tr>
             <td>Mensagem</td>
-            <td>'. $data['body'].'</td>
+            <td>' . $data['body'] . '</td>
         </tr>
         </tbody>
     </table>
@@ -70,7 +75,7 @@ class MailController
         if (!$mail->send()) {
             die ("Erro no envio do e-mail: {$mail -> ErrorInfo}");
         }
-        echo 'Mensagem enviada com sucesso';
+//        echo 'Mensagem enviada com sucesso';
     }
 
 }

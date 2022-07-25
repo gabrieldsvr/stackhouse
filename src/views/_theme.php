@@ -18,6 +18,7 @@
     <link href="<?= url("assets/css/prism.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/fabrx-styles.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/estilo.css") ?>" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="<?= url("assets/css/jquery-toast-plugin/jquery.toast.min.css") ?>">
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
@@ -66,6 +67,9 @@
 <script src="<?= url("assets/js/prism.min.js") ?>"></script>
 <script src="<?= url("assets/js/charts-light.js") ?>"></script>
 <script src="<?= url("assets/js/fabrx-scripts.js") ?>"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="<?= url("assets/css/jquery-toast-plugin/jquery.toast.min.js") ?>"></script>
 
 <?= $v->section("js"); ?>
 </body>
