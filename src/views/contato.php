@@ -14,7 +14,7 @@ $v->layout("_theme", [
                 <hr>
                 <p class="">Se você tem alguma sugestão, dúvida ou solicitação a fazer, utilize esse espaço para entrar em contato conosco. Teremos satisfação em responde.</p>
             </div>
-            <form class="mt-4 px-0 px-lg-5 py-2 mx-0 mx-md-5">
+            <form class="mt-4 px-0 px-lg-5 py-2 mx-0 mx-md-5" id="formContato" action="" method="POST">
                 <div class="form-group">
                     <input type="text" name="nome" placeholder="Nome completo" class="form-control" id="nome" required>
                 </div>
@@ -22,7 +22,7 @@ $v->layout("_theme", [
                     <input type="email" name="email" placeholder="Email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel"  name="telefone" placeholder="telefone" class="form-control" id="email" required>
+                    <input type="tel"  name="telefone" placeholder="telefone" class="form-control" id="telefone" required>
                 </div>
                 <div class="col-md-12 form-group ">
                         <div class="quform-input">
@@ -35,4 +35,57 @@ $v->layout("_theme", [
         </div>
     </div>
 </section>
+
+
+<?php $v->start("js") ?>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="<?=url("assets/js/jquery-validation/jquery.validate.min.js")?>"></script>
+
+<script>
+    $("#formContato").validate({
+        rules: {
+            nome: "required",
+            email: "required",
+            telefone: "required",
+            body: "required",
+        },
+        messages: {
+            nome: "Insira seu nome",
+            email: "Insira seu email para entrar em contato",
+            telefone: "Insira seu telefone de contato",
+            body: "Insira a sua mensagem",
+        },
+
+        errorPlacement: function (label, element) {
+            label.addClass('mt-2 text-danger');
+            label.insertAfter(element);
+        },
+        highlight: function (element, errorClass) {
+            $(element).parent().addClass('has-danger')
+            $(element).addClass('form-control-danger')
+        },
+        submitHandler: function (form, event) {
+            event.preventDefault();
+            var form = $("#formContato");
+            // var url = form.attr("action");
+            $.ajax({
+                type: "POST",
+                url: "<?=url_pesquisa("mail")?>",
+                data:  form.serialize(),
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data)
+                    // showSuccessToast();
+                    // $("#formImovel")[0].reset();
+                },
+            });
+        }
+    });
+
+</script>
+<?php $v->end("js") ?>
+
+
+
+
 

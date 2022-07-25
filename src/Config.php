@@ -10,10 +10,10 @@ const SITE = "STARK HOUSES";
 const MAIL = [
     "host" => "smtp.hostinger.com.br",
     "port" => "587",
-    "username" => "contato@gabrielawagner.com",
-    "passwd" => "31310801gG",
-    "from_name" => "Gabriela",
-    "from_email" => "contato@gabrielawagner.com",
+    "username" => "noreply@starkhouse.com.br",
+    "passwd" => "starkhouse123",
+    "from_name" => "Stark house",
+    "from_email" => "noreply@starkhouse.com.br",
     "email_recebimento" => "gabrieldossantosvargas@gmail.com",
 ];
 

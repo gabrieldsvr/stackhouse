@@ -13,10 +13,12 @@ $router->get("/map/jsonMap", "MapController:jsonMap", "MapController.jsonMap");
 $router->get("/propriedade/{id}", "WebController:propriedade", "WebController.propriedade");
 $router->get("/contato", "WebController:contato", "WebController.contato");
 $router->get("/sobre_nos", "WebController:sobre_nos", "WebController.sobre_nos");
+$router->get("/teste", "WebController:teste", "WebController.teste");
 
 
 
 $router->get("/mail", "MailController:send", "MailController.send");
+$router->post("/mail", "MailController:send", "MailController.send");
 
 
 
