@@ -12,7 +12,7 @@ $v->layout("_theme", [
             <div class="hero-caption px-0 px-md-5">
                 <h4 class="mb-0">FALE CONOSCO</h4>
                 <hr>
-                <p class="">Se você tem alguma sugestão, dúvida ou solicitação a fazer, utilize esse espaço para entrar em contato conosco. Teremos satisfação em responde.</p>
+                <p class="">Se você tem alguma sugestão, dúvida ou solicitação a fazer, utilize esse espaço para entrar em contato conosco. Teremos satisfação em responder.</p>
             </div>
             <form class="mt-4 px-0 px-lg-5 py-2 mx-0 mx-md-5" id="formContato" action="" method="POST">
                 <div class="form-group">

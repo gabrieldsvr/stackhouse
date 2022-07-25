@@ -35,7 +35,7 @@ $v->layout("_theme", [
         STARK HOUSE IMÓVEIS <br>
         <!--    Avenida Manoel Goulart, 1234<br>-->
         <!--    Centro - Presidente Prudente – CEP 12345-678 <br>-->
-        (48) 99113-7174<br>
+        +55 (48) 9 9113.7174<br>
         contato@starkhouse.com.br
     </div>
 </div>
