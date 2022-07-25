@@ -10,11 +10,11 @@ class MailController
     public function send($data)
     {
 
-//        $this->sendEmailRecebimento($data);
+        $this->sendEmailRecebimento($data);
 //        if (!$mail->send()) {
 //            die ("Erro no envio do e-mail: {$mail -> ErrorInfo}");
 //        }
-        echo 'Mensagem enviada com sucesso';
+//        echo 'Mensagem enviada com sucesso';
 
     }
 
