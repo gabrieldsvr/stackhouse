@@ -15,7 +15,8 @@ class WebController
         $this->view->addData(["router" => $router]);
     }
 
-    public function home($data):void{
+    public function home($data): void
+    {
         $imovelcontroller = new ImovelController();
         $imovel = $imovelcontroller->getAPI($data);
 
@@ -25,35 +26,46 @@ class WebController
         ]);
     }
 
-    public function map($data):void{
+    public function map($data): void
+    {
         $imovelcontroller = new ImovelController();
 
-        $values =  [
+        $values = [
             "title" => "MAPA",
             "imoveis" => $imovelcontroller->get(null),
-            "imovel_focus" =>isset($data['id']) ? json_decode($imovelcontroller->get($data['id'])->data()->json) : null
+            "imovel_focus" => isset($data['id']) ? json_decode($imovelcontroller->get($data['id'])->data()->json) : null
         ];
-        echo $this->view->render("map",$values);
+        echo $this->view->render("map", $values);
     }
-    public function propriedade($data):void{
+
+    public function propriedade($data): void
+    {
         $imovelcontroller = new ImovelController();
-        $imovel = $imovelcontroller->get($data['id']);
+        if (strpos($data['id'], "-")) {
+
+            $imovel = $imovelcontroller->getBySlug($data['id']);
+        } else {
+            $imovel = $imovelcontroller->get($data['id']);
+        }
         $imovelJSON = json_decode($imovel->data()->json);
         $id = $imovel->data()->id;
-
         echo $this->view->render("propriedade", [
             "title" => "DETALHES",
-            "imovel" =>  $imovelJSON,
+            "imovel" => $imovelJSON,
             "id" => $id
         ]);
     }
-    public function contato($data):void{
+
+    public function contato($data): void
+    {
 
         echo $this->view->render("contato", [
             "title" => "CONTATO"
         ]);
     }
-    public function sobre_nos($data):void{
+
+    public function sobre_nos($data): void
+    {
 
         echo $this->view->render("sobre_nos", [
             "title" => "SOBRE"
