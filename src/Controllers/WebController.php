@@ -38,7 +38,7 @@ class WebController
         echo $this->view->render("map", $values);
     }
 
-    public function propriedade($data): void
+    public function imovel($data): void
     {
         $imovelcontroller = new ImovelController();
         if (strpos($data['id'], "-")) {
@@ -49,7 +49,7 @@ class WebController
         }
         $imovelJSON = json_decode($imovel->data()->json);
         $id = $imovel->data()->id;
-        echo $this->view->render("propriedade", [
+        echo $this->view->render("imovel", [
             "title" => "DETALHES - " . $imovel->data()->slug,
             "imovel" => $imovelJSON,
             "id" => $id

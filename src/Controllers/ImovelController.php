@@ -60,7 +60,7 @@ class ImovelController
 
         return "<div class='col-lg-4 col-md-6 my-3'>
                 <div class='card shadow-40'>
-                    <a href='" . url_pesquisa('propriedade/' . $url) . "'>
+                    <a href='" . url_pesquisa('imovel/' . $url) . "'>
                     <img class='card-img-top' src='{$imovelJson->imagem_destaque}' style='max-height: 200px;'
                                       alt='Card Image'></a>
                     <div class='card-body'>
@@ -69,7 +69,7 @@ class ImovelController
                         {$imovelJson->valor}
                         </h5>
                         <p>{$imovelJson->caracteristicas->area}m² - {$imovelJson->caracteristicas->cama} Quartos {$imovelJson->caracteristicas->banheiro} Banheiros {$imovelJson->caracteristicas->garagem} Vagas</p>
-                        <a href='" . url_pesquisa('propriedade/'.$url) . "' class='btn btn-primary float-end'><span class='btn-text'>Detalhes</span></a>
+                        <a href='" . url_pesquisa('imovel/'.$url) . "' class='btn btn-primary float-end'><span class='btn-text'>Detalhes</span></a>
                     </div>
                 </div>
             </div>";

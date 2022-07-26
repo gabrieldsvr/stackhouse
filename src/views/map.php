@@ -40,7 +40,7 @@ $v->layout("_theme", [
                 if (imovelFeature.json.localization){
                     imovelFeature.type = 'Feature';
                     imovelFeature.properties = {
-                        'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.json.valor+'</h6><br>' + imovelFeature.json.bairro + " " +  imovelFeature.json.cidade + '<br>' + imovelFeature.json.caracteristicas.cama + ' Quartos ' + imovelFeature.json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.json.caracteristicas.garagem + ' Vagas ' + imovelFeature.json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("propriedade/")?>'+imovelFeature.id+'" class="btn btn-sm btn-primary"> Detalhes</a'
+                        'description' :  '<img class="card-img-top" style="max-height: 150px" src="'+imovelFeature.json.imagem_destaque +'" alt="Card Image"><hr><div><h6>R$ '+imovelFeature.json.valor+'</h6><br>' + imovelFeature.json.bairro + " " +  imovelFeature.json.cidade + '<br>' + imovelFeature.json.caracteristicas.cama + ' Quartos ' + imovelFeature.json.caracteristicas.banheiro + ' banheiros </br> ' + imovelFeature.json.caracteristicas.garagem + ' Vagas ' + imovelFeature.json.caracteristicas.area + ' m²</div><br><a href="<?=url_pesquisa("imovel/")?>'+imovelFeature.id+'" class="btn btn-sm btn-primary"> Detalhes</a'
                     };
                     imovelFeature.geometry = {
                         'type' : 'Point',
