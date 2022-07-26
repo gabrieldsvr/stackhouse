@@ -10,7 +10,7 @@ $v->layout("_theme", [
             <div class="col-12">
                 <h4><?= $imovel->nome?></h4>
                 <br>
-                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $imove->codigo ?? $id ?></h6>
+                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $imovel->codigo ?? $id ?></h6>
             </div>
         </div>
         <hr>

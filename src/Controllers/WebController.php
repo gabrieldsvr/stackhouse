@@ -50,7 +50,7 @@ class WebController
         $imovelJSON = json_decode($imovel->data()->json);
         $id = $imovel->data()->id;
         echo $this->view->render("propriedade", [
-            "title" => "DETALHES",
+            "title" => "DETALHES - " . $imovel->data()->slug,
             "imovel" => $imovelJSON,
             "id" => $id
         ]);
