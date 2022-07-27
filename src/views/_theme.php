@@ -17,18 +17,18 @@
     <link href="<?= url("assets/css/simplebar.min.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/prism.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link href="<?= url("assets/css/fabrx-styles.css") ?>" rel="stylesheet" type="text/css" media="all">
-    <link href="<?= url("assets/css/estilo.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="<?= url("assets/css/jquery-toast-plugin/jquery.toast.min.css") ?>">
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'/>
 
-
+    <link href="<?= url("assets/plugin/font-awesome/css/font-awesome.min.css") ?>" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link href="<?= url("assets/css/estilo.css") ?>" rel="stylesheet" type="text/css" media="all">
 
 
 </head>

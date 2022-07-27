@@ -31,11 +31,17 @@
 
 @media only screen and (min-width: 771px) and (max-width: 1024px) {
     #logo-footer {
-        max-width: 130%;
+        max-width: 250%;
     }
+
 
     .imagem-imovel {
         max-height: 200px !important;
+    }
+}
+@media only screen and (min-width: 1025px) {
+    #logo-footer {
+        max-width: 150%;
     }
 }
 
