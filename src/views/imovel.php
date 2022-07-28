@@ -8,9 +8,10 @@ $v->layout("_theme", [
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h4><?= $imovel->nome?></h4>
+                <h4><?= $imovel->nome ?></h4>
                 <br>
-                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?> #<?= $imovel->codigo ?? $id ?></h6>
+                <h6><?= $imovel->cidade ?>, <?= $imovel->estado ?> <?= $imovel->cep ?>
+                    #<?= $imovel->codigo ?? $id ?></h6>
             </div>
         </div>
         <hr>
@@ -32,11 +33,28 @@ $v->layout("_theme", [
                 <div class="row my-2">
                     <div class="card shadow-40">
                         <div class="card-body">
-                            <small class="card-subtitle mb-2 text-muted">A Venda</small>
-                            <h6 class="card-title font-weight-normal"><?= isset($imovel->valor) && $imovel->valor != "" ? "R$ {$imovel->valor}" : "A consultar" ?></h6>
+                            <div class="row">
+                                <small class="card-subtitle mb-2 text-muted">A Venda</small>
+                            </div>
+                            <div class="row">
+                                <h6 class="card-title font-weight-normal"><?= isset($imovel->valor) && $imovel->valor != "" ? "R$ {$imovel->valor}" : "A consultar" ?></h6>
+                            </div>
                             <hr>
-                            <div>
-                                <a href="<?=url_pesquisa("contato")?>" class="btn-lg btn-primary" ><span class="btn-text">Contato</span></a>
+                            <div class="row">
+                                <div class="col-12 col-lg-6 mb-2">
+                                    <a href="<?= url_pesquisa("contato") ?>"
+                                       class="btn btn-primary btn-rounded btn-fw">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <span class="btn-text">Contato</span></a>
+                                </div>
+                                <?php if (isset($imovel->video)) { ?>
+                                    <div class="col-12 col-lg-6 mb-2">
+                                        <div href="<?= $imovel->video?>"
+                                             class="btn btn-danger btn-rounded btn-fw">
+                                            <i class="fa-brands fa-youtube"></i>
+                                            <span class="btn-text">Videos</span></div>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -63,14 +81,16 @@ $v->layout("_theme", [
                     <div class="col-6 col-sm-6 col-md-4">
                         <i class="fa-solid fa-layer-group"></i> <?= $imovel->caracteristicas->area ?> m²
                     </div>
-                    <?php if (isset($imovel->caracteristicas->vr) && $imovel->caracteristicas->vr!=""){?>
-                    <div class="col-6 col-sm-6 col-md-4">
-                        <a href="<?=$imovel->caracteristicas->vr?>"><i class="fa-solid fa-vr-cardboard"></i> Passeio Virtual</a>
-                    </div>
-                    <?php } ?>
-                    <?php if (isset($imovel->localization)){?>
+                    <?php if (isset($imovel->caracteristicas->vr) && $imovel->caracteristicas->vr != "") { ?>
                         <div class="col-6 col-sm-6 col-md-4">
-                            <a href="<?=url_pesquisa("map/{$id}")?>"> <i class="fa-solid fa-map-location-dot"></i> Localização</a>
+                            <a href="<?= $imovel->caracteristicas->vr ?>"><i class="fa-solid fa-vr-cardboard"></i>
+                                Passeio Virtual</a>
+                        </div>
+                    <?php } ?>
+                    <?php if (isset($imovel->localization)) { ?>
+                        <div class="col-6 col-sm-6 col-md-4">
+                            <a href="<?= url_pesquisa("map/{$id}") ?>"> <i class="fa-solid fa-map-location-dot"></i>
+                                Localização</a>
                         </div>
                     <?php } ?>
                 </div>

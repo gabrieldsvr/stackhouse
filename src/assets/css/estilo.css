@@ -10,6 +10,9 @@
     .imagem-imovel {
         max-height: 200px !important;
     }
+    .icon-social{
+        font-size: 30px !important;
+    }
 }
 
 @media only screen and (min-width: 426px)  and (max-width: 770px) {
@@ -25,6 +28,10 @@
         max-height: 200px !important;
     }
 
+    .icon-social{
+        font-size: 40px !important;
+    }
+
 
 }
 
@@ -34,14 +41,27 @@
         max-width: 250%;
     }
 
+    #logo-header {
+        max-width: 150%;
+    }
 
     .imagem-imovel {
         max-height: 200px !important;
     }
+    .icon-social{
+        font-size: 40px !important;
+    }
 }
+
 @media only screen and (min-width: 1025px) {
     #logo-footer {
         max-width: 150%;
+    }
+    #logo-header {
+        max-width: 130%;
+    }
+    .icon-social{
+        font-size: 40px !important;
     }
 }
 
