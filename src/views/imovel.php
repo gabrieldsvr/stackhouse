@@ -43,14 +43,14 @@ $v->layout("_theme", [
                             <div class="row">
                                 <div class="col-12 col-lg-6 mb-2">
                                     <a href="<?= url_pesquisa("contato") ?>"
-                                       class="btn btn-primary btn-rounded btn-fw">
+                                       class="btn btn-primary btn-rounded btn-fw col-12">
                                         <i class="fa-solid fa-envelope"></i>
                                         <span class="btn-text">Contato</span></a>
                                 </div>
                                 <?php if (isset($imovel->video)) { ?>
                                     <div class="col-12 col-lg-6 mb-2">
                                         <a href="<?= $imovel->video?>"
-                                             class="btn btn-danger btn-rounded btn-fw">
+                                             class="btn btn-danger btn-rounded btn-fw col-12">
                                             <i class="fa-brands fa-youtube"></i>
                                             <span class="btn-text">Videos</span></a>
                                     </div>
