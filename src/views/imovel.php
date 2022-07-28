@@ -49,10 +49,10 @@ $v->layout("_theme", [
                                 </div>
                                 <?php if (isset($imovel->video)) { ?>
                                     <div class="col-12 col-lg-6 mb-2">
-                                        <div href="<?= $imovel->video?>"
+                                        <a href="<?= $imovel->video?>"
                                              class="btn btn-danger btn-rounded btn-fw">
                                             <i class="fa-brands fa-youtube"></i>
-                                            <span class="btn-text">Videos</span></div>
+                                            <span class="btn-text">Videos</span></a>
                                     </div>
                                 <?php } ?>
                             </div>
