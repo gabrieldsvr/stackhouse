@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Fabrx">
-    <meta name="keywords" content="Fabrx">
-    <meta name="author" content="Fabrx">
     <!-- Primary Meta Tags -->
-    <title>Starkhouse</title>
-    <meta name="title" content="Starkhouse">
-    <meta name="description" content="Imóveis que encantam em Florianópolis">
+     <title>Starkhouse</title>
+     <meta name="description" content="Imóveis que encantam em Florianópolis">
+     <meta name="keywords" content="imovel, florianópolis, alugel, compra, apartamento">
+     <meta name="email" content="contato@starkhouse.com.br">
+     <meta http-equiv="Content-Language" content="pt-br">
+     <meta name="Charset" content="UTF-8">
+     <meta name="Rating" content="General">
+
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -26,6 +27,7 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <title><?= $title ?></title>
     <link href="<?= url("assets/images/favicon.ico") ?>" rel="shortcut icon" type="image/x-icon">
     <!-- Fabrx External CSS -->
