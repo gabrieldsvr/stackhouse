@@ -61,6 +61,15 @@
 
 
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YKSXBCN6S1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', <?=getenv('GOOGLE_ANALYTICS')?>);
+</script>
 <body>
 
 <?php require __DIR__ . "/partials/_navbar.phtml" ?>
@@ -76,6 +85,7 @@
 </div>
 
 <?php require __DIR__ . "/partials/_footer.phtml" ?>
+
 
 
 <!-- Fabrx Scripts -->
