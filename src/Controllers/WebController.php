@@ -41,8 +41,7 @@ class WebController
     public function imovel($data): void
     {
         $imovelcontroller = new ImovelController();
-        if (strpos($data['id'], "-")) {
-
+        if (!is_numeric($data['id'])) {
             $imovel = $imovelcontroller->getBySlug($data['id']);
         } else {
             $imovel = $imovelcontroller->get($data['id']);
