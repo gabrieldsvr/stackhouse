@@ -16,14 +16,14 @@
     <meta property="og:url" content="https://starkhouse.com.br/">
     <meta property="og:title" content="Starkhouse">
     <meta property="og:description" content="Imóveis que encantam em Florianópolis">
-    <meta property="og:image" content="https://starkhouse.com.br/src/assets/images/logo/logo_color.png">
+    <meta property="og:image" content="https://starkhouse.com.br/src/assets/images/logo.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://starkhouse.com.br/">
     <meta property="twitter:title" content="Starkhouse">
     <meta property="twitter:description" content="Imóveis que encantam em Florianópolis">
-    <meta property="twitter:image" content="https://starkhouse.com.br/src/assets/images/logo/logo_color.png">
+    <meta property="twitter:image" content="https://starkhouse.com.br/src/assets/images/logo.jpg">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
